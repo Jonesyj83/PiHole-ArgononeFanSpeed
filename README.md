@@ -4,7 +4,7 @@
 
 Just a simple addon to add argonone fan speed to Pi-hole Sidemenu
 
-Not a Programming, just like to play around. If there is better ways of coding, please let me know.
+Not a Programmer, just like to play around. If there is a better way of coding this, please let me know.
 
 Step-1: Install https://gitlab.com/DarkElvenAngel/argononed and remove argonone script
 
