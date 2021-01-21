@@ -32,6 +32,9 @@ Currently working on Pi-hole v5.2.4 Web Interface v5.3.1 FTL v5.5.1
 
 
 Things to do!
+
 -Make fanspeed/temp setting display nicer
+
 -Maybe make a graph to display fan speeds
+
 -?????
