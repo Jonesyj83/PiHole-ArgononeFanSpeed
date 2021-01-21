@@ -1,6 +1,6 @@
 # pi-hole-argonone
 
-![Alt text](https://raw.githubusercontent.com/Jonesyj83/pi-hole-argonone/main/images/Screen%20Shot%202021-01-21%20at%2010.46.24%20am.png "Title")
+![Alt text](https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/main/images/Screen%20Shot%202021-01-21%20at%2010.46.24%20am.png "Title")
 
 Just a simple addon to add argonone fan speed to Pi-hole Sidemenu
 
