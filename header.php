@@ -407,13 +407,13 @@ if($auth) {
 		    <br/>
                     <?php
                     echo "<span><i class=\"fa fa-circle ";
-                        if ($fresult[0] > $fresult[3] || $fresult[0] < 0) {
+                        if ($fresult[0] == $fresult[3] || $fresult[0] < 0) {
                             echo "text-red";
                         }
                         elseif ($fresult[0] >= $fresult[2] || $fresult[0] < 0) {
                             echo "text-orange";
                         }
-			elseif ($fresult[0] >= $fresult[1] || $fresult[0] < 0) {
+			elseif ($fresult[0] >= $fresult[1] || $fresult[0] < 0){
 			    echo "text-yellow";
 			}
                         else
