@@ -154,20 +154,6 @@
     $FTLpid = intval(pidofFTL());
     $FTL = ($FTLpid !== 0 ? true : false);
 
-
-    if(isset($setupVars["SPEEDTESTSCHEDULE"]))
-  	{
-  		  $speedtestshedule = $setupVars["SPEEDTESTSCHEDULE"];
-  	}else {
-  	    $speedtestshedule  = false;
-  	}
-    if(isset($setupVars["SPEEDTEST_CHART_DAYS"]))
-  	{
-  		  $speedtestdays = $setupVars["SPEEDTEST_CHART_DAYS"]." Days";
-  	}else {
-  	    $speedtestdays  = "24 Hours";
-  	}
-
     $piholeFTLConf = piholeFTLConfig();
 ?>
 <!doctype html>
@@ -469,38 +455,6 @@ if($auth) {
                     <a href="queries.php">
                         <i class="fa fa-fw fa-file-alt"></i> <span>Query Log</span>
                     </a>
-                </li>
-                <!-- Speedtest -->
-                <li<?php if($scriptname === "speedtest.php"){ ?> class="active"<?php } ?>>
-                    <a href="speedtest.php">
-                        <i class="fa fa-tachometer-alt"></i> <span>Speedtest</span>
-                    </a>
-                </li>
-
-                <li class="treeview<?php if($scriptname === "db_queries.php" || $scriptname === "db_lists.php" || $scriptname === "db_graph.php"){ ?> active<?php } ?>">
-                  <a href="#">
-                    <i class="fa fa-clock"></i> <span>Long-term data</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li<?php if($scriptname === "db_graph.php"){ ?> class="active"<?php } ?>>
-                        <a href="db_graph.php">
-                            <i class="fa fa-fw fa-file-alt"></i> Graphics
-                        </a>
-                    </li>
-                    <li<?php if($scriptname === "db_queries.php"){ ?> class="active"<?php } ?>>
-                        <a href="db_queries.php">
-                            <i class="fa fa-fw fa-file-alt"></i> Query Log
-                        </a>
-                    </li>
-                    <li<?php if($scriptname === "db_lists.php"){ ?> class="active"<?php } ?>>
-                        <a href="db_lists.php">
-                            <i class="fa fa-fw fa-file-alt"></i> Top Lists
-                        </a>
-                    </li>
-                  </ul>
                 </li>
                 <!-- Whitelist -->
                 <li<?php if($scriptname === "whitelist"){ ?> class="active"<?php } ?>>
