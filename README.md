@@ -1,4 +1,10 @@
 # pi-hole-argonone
+I have started a new version (v2.0.0-beta)
+
+This is in beta stage. Still has a few things to add. But I'm flying out to work and wanted to show something. Everything works Locally.
+
+https://github.com/Jonesyj83/PiHole-ArgononeFanSpeed/tree/v2.0.0-beta
+
 
 ![Alt text](https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/main/images/Screen%20Shot%202021-01-21%20at%2010.46.24%20am.png "Title")
 
