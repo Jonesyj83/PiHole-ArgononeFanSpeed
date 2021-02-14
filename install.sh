@@ -12,7 +12,7 @@ if ! [ -x "$(command -v pihole)" ]; then
 fi
 defaultpiholedir=/var/www/html/admin
 read -p "Where is your Pi-Hole Admin folder? (Default = $defaultpiholedir)" piholedir
-: "${piholedir:=$defaultpiholedir}"
+piholedir=${piholedir:=$defaultpiholedir}
 
 if [ ! -d "$piholedir" ]; then
     echo "Directory $piholedir does not exist!! Aborting!"
