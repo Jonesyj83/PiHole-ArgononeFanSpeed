@@ -6,7 +6,7 @@
           <h3 class="box-title">FanSpeed results over last <?php echo htmlspecialchars($fanspeeddays); ?></h3>
         </div>
         <div style="width: 100%; overflow: auto">
-        <div style="width: 1500px; height: 140">
+        <div style="width: 1025px; height: 140">
           <div class="box-body">
           <div class="chart">
           <canvas id="fanspeedChart" width="0" height="140"></canvas>
