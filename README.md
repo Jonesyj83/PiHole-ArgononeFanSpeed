@@ -4,6 +4,10 @@ I have create this addon for PiHole to display Fan Speed changes and CPU Temp. I
 
 The Graph will update only on changes with fan speed or if no speed has change in 1 hour, it will update to current speed/temp.
 
+![screenshot](https://i.ibb.co/tzr2V06/Screen-Shot-2021-02-14-at-5-30-37-pm.png)
+
+![screenshot](https://i.ibb.co/0qzj0Mj/Screen-Shot-2021-02-14-at-5-29-15-pm.png)
+
 ## Installation
 
 
