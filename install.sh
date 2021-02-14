@@ -1,4 +1,7 @@
 #!/bin/bash
+echo ""
+echo "PiHole Argonone Fan Hat Monitor installation"
+echo ""
 if ! [ -x "$(command -v argonone-cli)" ]; then
     echo 'Error: Argononed is not installed. Install from https://gitlab.com/DarkElvenAngel/argononed' >&2
     exit
@@ -37,3 +40,10 @@ echo "* *  *  *  * $piholedir/scripts/pi-hole/fanspeed/fanspeed.sh" >> crontab.t
 sudo crontab crontab.tmp
 sudo rm crontab.tmp
 rm -rf ArgononeFanSpeed
+
+echo ""
+echo "Installation complete. Refresh your Pihole admin page to see changes."
+echo ""
+
+echo 0
+
