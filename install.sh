@@ -45,5 +45,3 @@ echo ""
 echo "Installation complete. Refresh your Pihole admin page to see changes."
 echo ""
 
-echo 0
-
