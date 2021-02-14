@@ -20,7 +20,7 @@ if [ ! -d "$piholedir" ]; then
 fi
 
 echo Cloning Git dir
-git clone -b v2.0.1 https://github.com/Jonesyj83/PiHole-ArgononeFanSpeed.git
+git clone https://github.com/Jonesyj83/PiHole-ArgononeFanSpeed.git
 sudo cp -r "PiHole-ArgononeFanSpeed/fanspeed" "$piholedir/scripts/pi-hole"
 sudo cp "PiHole-ArgononeFanSpeed/fanspeed.php" "$piholedir"
 sudo cp "PiHole-ArgononeFanSpeed/api_fanspeed.php" "$piholedir"
