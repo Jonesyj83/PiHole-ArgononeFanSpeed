@@ -11,8 +11,12 @@ Not a Programmer, just like to play around. If there is a better way of coding t
 
 ## Installation
 
+This installation script should work with any modified PiHole Installations you have.
+
 ```bash
-curl -o- https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/install.sh | bash
+wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/install.sh
+chmod +x install.sh
+bash install.sh
 ```
 
 
