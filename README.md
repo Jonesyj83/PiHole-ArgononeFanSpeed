@@ -12,7 +12,7 @@ Not a Programmer, just like to play around. If there is a better way of coding t
 ## Installation
 
 ```bash
-curl -o- https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/v2.0.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/install.sh | bash
 ```
 
 
