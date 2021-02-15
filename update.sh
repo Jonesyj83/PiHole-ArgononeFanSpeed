@@ -16,12 +16,10 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
     sudo rm -r "$piholedir/scripts/pi-hole/fanspeed"
     sudo rm "$piholedir/fanspeed.php"
     sudo rm "$piholedir/api_fanspeed.php"
-    echo "Upgrading PiHole"
     cd "$piholedir"
     sudo git fetch
     sudo git reset --hard HEAD
     sudo pihole -up
-    echo "Uninstall Complete"
     cd
     echo "Cloning Git dir"
     if [ -d "./PiHole-ArgononeFanSpeed" ]; then
