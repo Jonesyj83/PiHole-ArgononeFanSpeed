@@ -21,7 +21,13 @@ chmod +x install.sh
 bash install.sh
 ```
 
+## Uninstall
 
+```bash
+wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/uninstall.sh
+chmod +x uninstall.sh
+bash uninstall.sh
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
