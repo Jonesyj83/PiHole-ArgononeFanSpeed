@@ -21,6 +21,14 @@ chmod +x install.sh
 bash install.sh
 ```
 
+## Update
+This updates PiHole-ArgononeFanSpeed and PiHole to the latest versions
+```bash
+wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/update.sh
+chmod +x update.sh
+bash update.sh
+```
+
 ## Uninstall
 
 ```bash
