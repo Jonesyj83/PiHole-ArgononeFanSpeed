@@ -7,9 +7,9 @@ Not a Programmer, just like to play around. If there is a better way of coding t
 
 Will only work with DarkElvenAngel ArgononeD daemon [https://gitlab.com/DarkElvenAngel/argononed](https://gitlab.com/DarkElvenAngel/argononed)
 
-![screenshot](https://i.ibb.co/tzr2V06/Screen-Shot-2021-02-14-at-5-30-37-pm.png)
+![screenshot](https://i.ibb.co/9r3NFR6/Screen-Shot-2021-02-15-at-12-16-14-pm.png)
 
-![screenshot](https://i.ibb.co/0qzj0Mj/Screen-Shot-2021-02-14-at-5-29-15-pm.png)
+![screenshot](https://i.ibb.co/fH9bfxc/Screen-Shot-2021-02-15-at-12-17-40-pm.png)
 
 ## Installation
 
