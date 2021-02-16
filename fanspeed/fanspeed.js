@@ -13,7 +13,6 @@ function updateFanSpeedData() {
     }).done(function (results) {
 
         results.forEach(function (packet) {
-            // console.log(speedlabels.indexOf(formatDate(packet.start_time)));
             if (fanspeedlabels.indexOf(formatDate(packet.start_time)) === -1) {
                 fanspeedlabels.push(formatDate(packet.start_time));
                 fanspeed.push(parseFloat(packet.fanspeed));
@@ -29,7 +28,6 @@ function updateFanSpeedData() {
 
 
 setInterval(function () {
-    // console.log('updateFanSpeedData');
     updateFanSpeedData();
 }, 6000);
 
@@ -126,16 +124,6 @@ var fanspeedChart = new Chart(fanspeedChartctx, {
                 }
             }
         }
-//	plugins: {
-//	   zoom: {
-//		zoom: {
-//		   enabled: true,
-//		   drag: dragOptions,
-//		   mode: 'x',
-//		   speed: 0.05
-	 // 	}
-	 //  }
-	//}
     }
 });
 updateFanSpeedData();
