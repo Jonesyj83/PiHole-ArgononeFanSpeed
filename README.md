@@ -16,7 +16,7 @@ Will only work with DarkElvenAngel ArgononeD daemon [https://gitlab.com/DarkElve
 This installation script should work with any modified PiHole Installations you have.
 make sure [https://gitlab.com/DarkElvenAngel/argononed](https://gitlab.com/DarkElvenAngel/argononed) is installed and not the standard script
 ```bash
-wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/install.sh
+wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/main/install.sh
 chmod +x install.sh
 bash install.sh
 ```
@@ -24,7 +24,7 @@ bash install.sh
 ## Update
 This updates PiHole-ArgononeFanSpeed and PiHole to the latest versions
 ```bash
-wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/update.sh
+wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/main/update.sh
 chmod +x update.sh
 bash update.sh
 ```
@@ -32,7 +32,7 @@ bash update.sh
 ## Uninstall
 
 ```bash
-wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/uninstall.sh
+wget https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/main/uninstall.sh
 chmod +x uninstall.sh
 bash uninstall.sh
 ```
