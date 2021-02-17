@@ -1,10 +1,12 @@
 var fanspeedlabels = [], fanspeed = [], temp = [];
 
+
+
 function updateFanSpeedData() {
 
 
     function formatDate(itemdate) {
-        return moment(itemdate).format("MMM Do HH:mm");
+        return moment(itemdate).format("MMM D HH:mm");
     }
 
     $.ajax({
@@ -28,6 +30,7 @@ function updateFanSpeedData() {
 
 
 setInterval(function () {
+    console.log('updateFanSpeedData');
     updateFanSpeedData();
 }, 6000);
 
@@ -93,14 +96,11 @@ var fanspeedChart = new Chart(fanspeedChartctx, {
             ],
             xAxes: [
                 {
-                    // type :'time',
                     display: true,
                     scaleLabel: {
                         display: true
                     },
                     ticks: {
-                        //autoSkip: true,
-                        //maxTicksLimit: 10,
                         maxRotation: 0,
                         minRotation: 0
                     }
@@ -125,5 +125,46 @@ var fanspeedChart = new Chart(fanspeedChartctx, {
             }
         }
     }
+});
+
+$(".period").click( function() {
+  var period = this.id;
+  minValue = new Date()
+  switch(period){
+    case "1h":
+      minValue.setHours(minValue.getHours() - 1);
+      break;
+    case "3h":
+      minValue.setHours(minValue.getHours() - 3);
+      break;
+    case "6h":
+      minValue.setHours(minValue.getHours() - 6);
+      break;
+    case "9h":
+      minValue.setHours(minValue.getHours() - 9);
+      break;
+    case "12h":
+      minValue.setHours(minValue.getHours() - 12);
+      break;
+    case "24h":
+      minValue.setHours(minValue.getHours() - 24);
+      break;
+    default:
+      minValue
+	}
+    console.log(minValue);
+    var startdate = moment(minValue).format("MMM D HH:mm");
+    const now = new Date(startdate);
+    let closest = Infinity;
+
+    fanspeedlabels.forEach(function(d) {
+	const date = new Date(d);
+
+	if (date >= now && (date < new Date(closest) || date < closest)) {
+	   closest = d;
+	}
+    });
+    fanspeedChart.options.scales.xAxes[0].ticks.min = closest;
+    fanspeedChart.update();
 });
 updateFanSpeedData();
