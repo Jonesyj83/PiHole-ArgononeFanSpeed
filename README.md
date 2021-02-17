@@ -46,4 +46,4 @@ Please make sure to update tests as appropriate.
 [MIT](https://raw.githubusercontent.com/Jonesyj83/PiHole-ArgononeFanSpeed/v2.0.1/LICENSE)
 
 ## Curent working PiHole version
-Pi-hole v5.2.4 Web Interface v5.3.2 FTL v5.6
+Pi-hole v5.2.4 Web Interface v5.4 FTL v5.7
