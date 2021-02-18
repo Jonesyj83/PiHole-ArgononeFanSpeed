@@ -35,14 +35,11 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
         sudo cp "PiHole-ArgononeFanSpeed/api_fanspeed.php" "$piholedir"
         sudo cp "$piholedir/scripts/pi-hole/fanspeed/fanspeed.db" "/etc/pihole/"
         echo "Adding config settings"
-        echo 'FANSPEEDDAYS=1' | sudo tee -a /etc/pihole/setupVars.conf
-        echo 'FANSPEED_CHART_DAYS=1' | sudo tee -a /etc/pihole/setupVars.conf
         echo "Editing PiHole files to accept changes"
         sudo sed -i $'/topItems/{irequire("scripts/pi-hole/fanspeed/FTL_fanspeed.php");\n:a;n;ba}' "$piholedir/api_FTL.php"
         sudo sed -i '/if($auth){ ?>/a <?php include "./scripts/pi-hole/fanspeed/index_fanspeed.php"; ?>' "$piholedir/index.php"
         sudo sed -i '/index.js/a <script src="scripts/pi-hole/js/fanspeed.js"></script>\n' "$piholedir/index.php"
-        sudo sed -i '/$FTL = ($FTLpid !== 0 ? true : false);/a     include ("./scripts/pi-hole/fanspeed/header_fanspeed.php");' "$piholedir/scripts/pi-hole/php/header.php"
-        sudo sed -i $'/db_lists.php/{i\t<?php include "./scripts/pi-hole/fanspeed/header_fanspeed1.php"; ?>\n:a;n;ba}' "$piholedir/scripts/pi-hole/php/header.php"
+        sudo sed -i $'/db_lists.php/{i\t<?php include "./scripts/pi-hole/fanspeed/header_fanspeed.php"; ?>\n:a;n;ba}' "$piholedir/scripts/pi-hole/php/header.php"
         sudo sed -i $'/piholeFTLConfig/{i$dbFanSpeed ="/etc/pihole/fanspeed.db";\n:a;n;ba}' "$piholedir/settings.php"
         sudo sed -i '/Other API functions/a require("api_fanspeed.php");\n' "$piholedir/api.php"
         sudo sed -i '/Other API functions/a include('scripts/pi-hole/fanspeed/data_fanspeed.php');\n' "$piholedir/api.php"
