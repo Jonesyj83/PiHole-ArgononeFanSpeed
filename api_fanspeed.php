@@ -10,9 +10,6 @@ if(!isset($api))
 
 $dbFanSpeed ="/etc/pihole/fanspeed.db";
 
-$setupVars = parse_ini_file("/etc/pihole/setupVars.conf");
-
-
 if (isset($_GET['getFanSpeed24hrs'])  && $auth)
 {
     $data = array_merge($data,  getFanSpeedData24hrs($dbFanSpeed));
@@ -44,8 +41,7 @@ function getAllFanSpeedData($dbFanSpeed)
 function getLastFanSpeedResult($dbFanSpeed){
     if(!file_exists($dbFanSpeed)){
         // create db of not exists
-        exec('sudo pihole -a -sn');
-        return array();
+        copy('scripts/pihole/fanspeed/fanspeed.db', '/etc/pihole/fanspeed.db');        return array();
     }
 
     $db = new SQLite3($dbFanSpeed);
@@ -83,7 +79,7 @@ function getFanSpeedData($dbFanSpeed,$durationdays="1")
 {
     if(!file_exists($dbFanSpeed)){
         // create db of not exists
-        exec('sudo pihole -a -sn');
+        copy('scripts/pihole/fanspeed/fanspeed.db', '/etc/pihole/fanspeed.db'); 
         return array();
     }
     $db = new SQLite3($dbFanSpeed);
@@ -125,15 +121,7 @@ function getFanSpeedData($dbFanSpeed,$durationdays="1")
 
 
 function getFanSpeedData24hrs($dbFanSpeed){
-    global $log, $setupVars;
-    if(isset($setupVars["FANSPEED_CHART_DAYS"]))
-    {
-        $dataFromFanSpeedDB = getFanSpeedData($dbFanSpeed,$setupVars["FANSPEED_CHART_DAYS"]);
-    }
-    else{
-        $dataFromFanSpeedDB = getFanSpeedData($dbFanSpeed);
-    }
-
-
+    global $log;
+    $dataFromFanSpeedDB = getFanSpeedData($dbFanSpeed);
     return $dataFromFanSpeedDB;
 }
