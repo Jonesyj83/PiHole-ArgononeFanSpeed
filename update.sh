@@ -27,8 +27,8 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
     fi
     git clone https://github.com/Jonesyj83/PiHole-ArgononeFanSpeed.git
     echo "Moving files into PiHole directory"
-    sudo cp "PiHole-ArgononeFanSpeed/fanspeed/fanspeed.js" "$piholedir/scripts/pihole/js/"
-    sudo cp "PiHole-ArgononeFanSpeed/fanspeed/fanspeedresults.js" "$piholedir/scripts/pihole/js/"
+    sudo cp "PiHole-ArgononeFanSpeed/fanspeed/fanspeed.js" "$piholedir/scripts/pi-hole/js/"
+    sudo cp "PiHole-ArgononeFanSpeed/fanspeed/fanspeedresults.js" "$piholedir/scripts/pi-hole/js/"
     sudo cp -r "PiHole-ArgononeFanSpeed/fanspeed" "$piholedir/scripts/pi-hole"
     sudo cp "PiHole-ArgononeFanSpeed/fanspeed.php" "$piholedir"
     sudo cp "PiHole-ArgononeFanSpeed/api_fanspeed.php" "$piholedir"
