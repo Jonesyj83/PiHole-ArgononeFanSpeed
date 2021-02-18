@@ -39,7 +39,6 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
     sudo sed -i $'/db_lists.php/{i\t<?php include "./scripts/pi-hole/fanspeed/header_fanspeed.php"; ?>\n:a;n;ba}' "$piholedir/scripts/pi-hole/php/header.php"
     sudo sed -i $'/piholeFTLConfig/{i$dbFanSpeed ="/etc/pihole/fanspeed.db";\n:a;n;ba}' "$piholedir/settings.php"
     sudo sed -i '/Other API functions/a require("api_fanspeed.php");\n' "$piholedir/api.php"
-    sudo sed -i '/Other API functions/a include('scripts/pi-hole/fanspeed/data_fanspeed.php');\n' "$piholedir/api.php"
     sudo sed -i -e '$a input {\ncolor:#556068;\nbackground-color:#32393e;\ncursor:pointer;\noutline:none;\nborder:none;\n}\ninput:hover,\ninput:focus{\ncolor: #fff;\nbackground-color:#22272a;\noutline:none;\nborder:none;\n}' "$pirholedir/style/themes/default-dark.css"
     sudo sed -i -e '$a input {\ncolor:#4b646f;\nbackground-color:#fff;\ncursor:pointer;\noutline:none;\nborder:none;\n}\ninput:hover,\ninput:focus{\ncolor: #fff;\nbackground-color:#1e282c;\noutline:none;\nborder:none;\n}' "$piholedir/style/themes/default-light.css"
 
