@@ -23,8 +23,6 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
     if [[ $dbfile == "y" || $dbfile == "Y" || $dbfile == "yes" || $dbfile == "Yes" ]]; then
         sudo rm /etc/pihole/fanspeed.db
     fi
-    sudo sed -i '/FANSPEED_CHART_DAYS/d' /etc/pihole/setupVars.conf
-    sudo sed -i '/FANSPEEDDAYS/d' /etc/pihole/setupVars.conf
     echo "Removing all files from PiHole and returning to standard"
     cd "$piholedir"
     sudo git fetch
