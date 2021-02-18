@@ -1,21 +1,11 @@
 <?php
     $log = array();
-    $setupVars = parse_ini_file("/etc/pihole/setupVars.conf");
     // fanspeed DB
     $dbFanSpeed ="/etc/pihole/fanspeed.db";
 
     // Check if pihole.log exists and is readable
     $logListName = checkfile("/var/log/pihole.log");
     $log = new \SplFileObject($logListName);
-
-    if(isset($setupVars["API_PRIVACY_MODE"]))
-    {
-        $privacyMode = $setupVars["API_PRIVACY_MODE"];
-    }
-    else
-    {
-        $privacyMode = false;
-    }
 
     // Check if time zone is set
     // https://github.com/pi-hole/AdminLTE/pull/394
@@ -119,16 +109,8 @@ function getAllFanSpeedData($dbFanSpeed)
 
 
     function getFanSpeedData24hrs($dbFanSpeed){
-      global $log, $setupVars;
-      if(isset($setupVars["FANSPEED_CHART_DAYS"]))
-      {
-        $dataFromFanSpeedDB = getFanSpeedData($dbFanSpeed,$setupVars["FANSPEED_CHART_DAYS"]);
-      }
-      else{
-        $dataFromFanSpeedDB = getFanSpeedData($dbFanSpeed);
-      }
-
-
+      global $log;
+      $dataFromFanSpeedDB = getFanSpeedData($dbFanSpeed);
       return $dataFromFanSpeedDB;
     }
     ?>
