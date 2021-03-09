@@ -34,6 +34,8 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
         sudo cp "PiHole-ArgononeFanSpeed/fanspeed.php" "$piholedir"
         sudo cp "PiHole-ArgononeFanSpeed/api_fanspeed.php" "$piholedir"
         sudo cp "$piholedir/scripts/pi-hole/fanspeed/fanspeed.db" "/etc/pihole/"
+        sudo chown pihole:pihole /etc/pihole/fanspeed.db
+        sudo chmod 664 /etc/pihole/fanspeed.db
         echo "Adding config settings"
         echo "Editing PiHole files to accept changes"
         sudo sed -i $'/topItems/{irequire("scripts/pi-hole/fanspeed/FTL_fanspeed.php");\n:a;n;ba}' "$piholedir/api_FTL.php"
