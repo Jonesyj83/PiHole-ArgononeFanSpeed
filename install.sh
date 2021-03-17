@@ -33,7 +33,7 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
         sudo cp -r "PiHole-ArgononeFanSpeed/fanspeed" "$piholedir/scripts/pi-hole"
         sudo cp "PiHole-ArgononeFanSpeed/fanspeed.php" "$piholedir"
         sudo cp "PiHole-ArgononeFanSpeed/api_fanspeed.php" "$piholedir"
-        sudo cp "PiHole-ArgononeFanSpeed/settings.js" "$piholedir/scripts/pi-hole/js/"
+        sudo cp "PiHole-ArgononeFanSpeed/fansettings.js" "$piholedir/scripts/pi-hole/js/"
         sudo cp "PiHole-ArgononeFanSpeed/settings.php" "$piholedir/scripts/pi-hole/fanspeed/"
         sudo cp "PiHole-ArgononeFanSpeed/savesettings.php" "$piholedir/scripts/pi-hole/fanspeed/"
         sudo cp "$piholedir/scripts/pi-hole/fanspeed/fanspeed.db" "/etc/pihole/"
