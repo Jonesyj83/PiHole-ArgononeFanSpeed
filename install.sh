@@ -36,9 +36,12 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
         sudo cp "PiHole-ArgononeFanSpeed/fansettings.js" "$piholedir/scripts/pi-hole/js/"
         sudo cp "PiHole-ArgononeFanSpeed/settings.php" "$piholedir/scripts/pi-hole/fanspeed/"
         sudo cp "PiHole-ArgononeFanSpeed/savesettings.php" "$piholedir/scripts/pi-hole/fanspeed/"
-        sudo cp "$piholedir/scripts/pi-hole/fanspeed/fanspeed.db" "/etc/pihole/"
-        sudo chown pihole:pihole /etc/pihole/fanspeed.db
-        sudo chmod 664 /etc/pihole/fanspeed.db
+        read -p "Do you wish to use a NEW database file? " dbfile
+        if [[ $dbfile == "y" || $dbfile == "Y" || $dbfile == "yes" || $dbfile == "Yes" ]]; then
+            sudo cp "$piholedir/scripts/pi-hole/fanspeed/fanspeed.db" "/etc/pihole/"
+            sudo chown pihole:pihole /etc/pihole/fanspeed.db
+            sudo chmod 664 /etc/pihole/fanspeed.db
+        fi
         echo "Adding config settings"
         echo "Editing PiHole files to accept changes"
         sudo sed -i $'/topItems/{irequire("scripts/pi-hole/fanspeed/FTL_fanspeed.php");\n:a;n;ba}' "$piholedir/api_FTL.php"
