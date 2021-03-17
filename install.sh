@@ -58,7 +58,7 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
         a\ <?php include("scripts/pi-hole/fanspeed/settings.php"); ?>
         }' "$piholedir/settings.php"
         
-        sudo -i sed '
+        sudo sed -i '
         /aria-controls="teleporter"/{
         n 
         a\ \t\t<li role="presentation"<?php if($tab === "fanspeed"){ ?> class="active"<?php } ?>> \n \t\t\t<a href="#fanspeed" aria-controls="fanspeed" aria-expanded="<?php echo $tab === "fanspeed" ? "true" : "false"; ?>" role="tab" data-toggle="tab">Fanspeed</a> \n\t\t</li>
