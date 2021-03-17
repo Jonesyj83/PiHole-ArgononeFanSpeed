@@ -1,3 +1,4 @@
+<?php
 if(isset($_POST["fanfield"]))
 	{
 		// Handle CSRF
@@ -102,3 +103,4 @@ if(isset($_POST["fanfield"]))
 
 }
 }
+?>
