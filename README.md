@@ -7,9 +7,15 @@ Not a Programmer, just like to play around. If there is a better way of coding t
 
 Will only work with DarkElvenAngel ArgononeD daemon [https://gitlab.com/DarkElvenAngel/argononed](https://gitlab.com/DarkElvenAngel/argononed)
 
+## Updates
+v2.0.2
+Add Settings Page, can not Update/View all settings for Argononed
+
 ![screenshot](https://i.ibb.co/X2v2207/Screen-Shot-2021-02-17-at-9-03-15-pm.png)
 
 ![screenshot](https://i.ibb.co/fH9bfxc/Screen-Shot-2021-02-15-at-12-17-40-pm.png)
+
+![screenshot](https://i.ibb.co/k2K2tyZ/Screen-Shot-2021-03-18-at-8-30-30-am.png)
 
 ## Installation
 
