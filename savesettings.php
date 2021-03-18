@@ -97,7 +97,7 @@ if(isset($_POST["fanfield"]))
             break;
     case "clearfandb":
             $rootdir = $_SERVER['DOCUMENT_ROOT'];
-            shell_exec('cp /var/www/html/admin/scripts/pi-hole/fanspeed/fanspeed.db /etc/pihole/fanspeedtest.db');
+            shell_exec('cp /var/www/html/admin/scripts/pi-hole/fanspeed/fanspeed.db /etc/pihole/fanspeed.db');
             $success = "Fanspeed database is cleared";
             break;
 
