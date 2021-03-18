@@ -15,7 +15,7 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
     echo "Removing Crontab"
     sudo crontab -l | sudo grep -v "$piholedir/scripts/pi-hole/fanspeed/fanspeed.sh" | sudo crontab -
     echo "Removing Files and config"
-    sudo rm -r "$piholedir/scripts/pi-hole/fanspeed"
+    sudo rm -r "$piholedir/scripts/pi-hole/fanspeed/"
     sudo rm "$piholedir/scripts/pi-hole/js/fan*"
     sudo rm "$piholedir/fanspeed.php"
     sudo rm "$piholedir/api_fanspeed.php"
