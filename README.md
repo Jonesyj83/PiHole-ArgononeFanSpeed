@@ -1,6 +1,4 @@
-# Buy me a coffee.
 
-<a href="https://www.buymeacoffee.com/Jonesy" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;" ></a>
 
 
 # PiHole Argonone Fan Speed
