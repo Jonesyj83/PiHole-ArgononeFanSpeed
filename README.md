@@ -1,3 +1,8 @@
+# Buy me a coffee.
+
+<a href="https://www.buymeacoffee.com/Jonesy" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;" ></a>
+
+
 # PiHole Argonone Fan Speed
 
 I have create this addon for PiHole to display Fan Speed changes and CPU Temp. I am just doing this to teach myself some programming. Everything is working on my end. If there is better ways of doing this please let me know. 
