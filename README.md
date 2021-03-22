@@ -1,4 +1,8 @@
+# Buy me a coffee.
 
+If you like my projects, you can buy me a coffee.
+
+<a href="https://www.buymeacoffee.com/Jonesy" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(176, 4, 242, 1) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(176, 4, 242, 1) !important;" ></a>
 
 
 # PiHole Argonone Fan Speed
