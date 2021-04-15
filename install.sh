@@ -75,7 +75,7 @@ if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]
         sudo sed -i -e '$a input {\ncolor:#556068;\nbackground-color:#32393e;\ncursor:pointer;\noutline:none;\nborder:none;\n}\ninput:hover,\ninput:focus{\ncolor: #fff;\nbackground-color:#22272a;\noutline:none;\nborder:none;\n}' "$piholedir/style/themes/default-dark.css"
         sudo sed -i -e '$a input {\ncolor:#4b646f;\nbackground-color:#fff;\ncursor:pointer;\noutline:none;\nborder:none;\n}\ninput:hover,\ninput:focus{\ncolor: #fff;\nbackground-color:#1e282c;\noutline:none;\nborder:none;\n}' "$piholedir/style/themes/default-light.css"
         sudo sed -i -e '$a input[type=number]::-webkit-inner-spin-button, \ninput[type=number]::-webkit-outer-spin-button { \n-webkit-appearance: none; \n-moz-appearance: none; \nappearance: none; \nmargin: 0; \n}' "$piholedir/style/pi-hole.css"
-        sudo sed -i '/$success = "";/a require($_SERVER['DOCUMENT_ROOT']."/admin/scripts/pi-hole/fanspeed/savesettings.php");\n' "$piholedir/scripts/pi-hole/php/savesettings.php"
+        sudo sed -i '/$success = "";/a require($_SERVER["DOCUMENT_ROOT"]."/admin/scripts/pi-hole/fanspeed/savesettings.php");\n' "$piholedir/scripts/pi-hole/php/savesettings.php"
         echo "Adding crontab"
         sudo crontab -l > crontab.tmp
         echo "* *  *  *  * $piholedir/scripts/pi-hole/fanspeed/fanspeed.sh" >> crontab.tmp
