@@ -16,7 +16,7 @@ Will only work with DarkElvenAngel ArgononeD daemon [https://gitlab.com/DarkElve
 
 ## Updates
 v2.0.2
-Add Settings Page, can not Update/View all settings for Argononed
+Added Settings Page, can Update/View all settings for Argononed
 
 ![screenshot](https://i.ibb.co/X2v2207/Screen-Shot-2021-02-17-at-9-03-15-pm.png)
 
